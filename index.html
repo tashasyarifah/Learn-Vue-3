@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Vue Mastery</title>
-    <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles.css" />
-    <!-- Import Vue.js -->
-    <script src="https://unpkg.com/vue@3"></script>
-  </head>
-  <body>
-    <div id="app">
-      <h1>Product goes here</h1>
-    </div>
+  	<head>
+    	<meta charset="UTF-8" />
+    	<title>Learn Vue 3</title>
+    	<!-- Import Styles -->
+    	<link rel="stylesheet" href="./assets/styles.css" />
+    	<!-- Import Vue.js -->
+    	<script src="https://unpkg.com/vue@3"></script>
+  	</head>
+	<body>
+    	<div id="app">
 
-    <!-- Import Js -->
-    <script src="./main.js"></script>
+      		<div class="nav-bar"></div>
+
+			<div class="cart">Cart{{ cart.length }}</div>
+			<product-display 
+			:premium="premium" 
+			@add-to-cart="updateCart">
+			</product-display>
+      
+      
+    	</div>
+
+    	<!-- Import Js -->
+    	<script src="./main.js"></script>
+
+		<script src="./components/ProductDisplay.js"></script>
+
+		<script src="./components/ProductDetails.js"></script>
+
+		<script src="./components/ReviewForm.js"></script>
+
+    	<!-- Mount App -->
+    	<script>
+      		const mountedApp = app.mount("#app")
+    	</script>
   </body>
 </html>

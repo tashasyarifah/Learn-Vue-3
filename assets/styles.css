@@ -46,6 +46,10 @@ body {
   cursor: not-allowed;
 }
 
+.out-of-stock-img {
+  opacity: 0.5;
+}
+
 h1 {
   font-size: 50px;
 }
